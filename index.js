@@ -55,19 +55,19 @@ Sparky.prototype = {
 
 	digitalWrite: function(pin, value) {
 		value = this.formatDigitalValue(value)
-		this._command('digitalWrite', pin + ',' + value)
+		this._command('digitalwrite', pin + ',' + value)
 	},
 
 	analogWrite: function(pin, value) {
-		this._command('analogWrite', pin + ',' + value)
+		this._command('analogwrite', pin + ',' + value)
 	},
 
 	digitalRead: function(pin, callback) {
-		this._command('digitalRead', pin, callback)
+		this._command('digitalread', pin, callback)
 	},
 
 	analogRead: function(pin, callback) {
-		this._command('analogRead', pin, callback)
+		this._command('analogread', pin, callback)
 	},
 
 	/**
